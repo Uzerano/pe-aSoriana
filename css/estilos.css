@@ -51,7 +51,7 @@ h3 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
 }
 
 h2 {
@@ -63,8 +63,7 @@ h3 {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
 }
 
 .contenedor {
@@ -146,5 +145,44 @@ img {
     .navegacion ul li a:hover {
         color: var(--colorPrincipal);
         font-weight: bold;
+    }
+}
+
+/* CABEZERA  */
+
+.contenido {
+    background-image: url("../imagenes/bravas.JPG");
+    width: 95%;
+    height: 70vh;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--blanco);
+    margin-bottom: 0;
+}
+
+.contenido p {
+    color: var(--blanco);
+    font-style: italic;
+    font-size: 2rem;
+    letter-spacing: .5rem;
+}
+
+@media (min-width: 768px) {
+    .contenido {
+        width: 100%;
+       
     }
 }
