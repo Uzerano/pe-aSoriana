@@ -1,0 +1,150 @@
+/*   VARIABLES */
+
+:root {
+    --fuentePrincipal: "Open sans", sans-serif;
+    --fuenteSecundaria: "Roboto Condensed", sans-serif;
+    /* COLORES */
+    --colorPrincipal: #f00;
+    --secundario: #f2efef;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #edeaea;
+    --azul: #5768fa;
+    --grisOscuro: #888686;
+    --azulClaro: #3fadf7
+}
+
+/* ESTILOS COMUNES */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--secundario);
+    font-size: 1.8rem;
+    font-family: var(--funetesPrincipal);
+    color: var(--negro);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    ;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--colorPrincipal);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegacion ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.navegacion {
+    width: 100%;
+    background-color: var(--grisOscuro);
+}
+
+.logo p {
+    text-transform: uppercase;
+    color: var(--colorPrincipal);
+    font-family: 'Open Sans';
+    font-weight: bold;
+    letter-spacing: .5rem;
+    text-align: center;
+}
+
+.navegacion ul li a {
+    color: var(--blanco);
+    font-family: var(--fuenteSecundaria);
+}
+
+.menu .cerrar {
+    position: absolute;
+    right: 3%;
+    top: 5%;
+    color: var(--blanco);
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .menu .cerrar {
+        display: none;
+    }
+
+    .menu {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navegacion ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .navegacion {
+        background-color: var(--secundario);
+    }
+
+    .navegacion ul li a {
+        display: inline-block;
+        color: var(--negro);
+    }
+
+    .navegacion ul li a:hover {
+        color: var(--colorPrincipal);
+        font-weight: bold;
+    }
+}
