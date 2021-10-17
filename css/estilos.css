@@ -68,7 +68,7 @@ h3 {
 
 p {
   font-family: var(--fuenteSecundaria);
-  color: var(--grisOscuro);
+  color: var(--negro);
   font-style: italic;
 }
 
@@ -100,7 +100,7 @@ img {
 
 .navegacion {
   width: 100%;
-  background-color: var(--colorPrincipal);
+  background-color: var(--azulClaro);
 }
 
 .logo p {
@@ -378,8 +378,8 @@ margin: 0 auto;
   color: var(--blanco);
 }
 
-.navegacion__footer .direccion p {
-  margin: 2rem;
+ .direccion p {
+  margin: 2rem 0;
   color: var(--blanco);
 }
 
@@ -391,7 +391,9 @@ margin: 0 auto;
 .imagen__footer img {
   border-radius: 1rem;
 }
-
+ .parrafo__final {
+   color: var(--blanco);
+ }
 
 @media (min-width: 768px) {
   .footer {
