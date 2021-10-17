@@ -118,10 +118,6 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .menu .cerrar {
-    display: none;
-  }
-
   .menu {
     flex-direction: row;
     align-items: center;
@@ -243,8 +239,8 @@ img {
 /*  COMENTARIOS */
 
 .comentarios {
-    width: 95%;
-    margin: 0 auto;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .contenido__comentarios .nombre {
@@ -320,7 +316,6 @@ img {
   flex: 0 0 10rem;
 }
 
-
 .campo__nombre,
 .campo__email,
 .campo__mensaje {
@@ -343,11 +338,24 @@ img {
 /*  FOOTER  */
 
 .footer {
-  background:  linear-gradient(to right, rgba(76,76,76,1) 0%, rgba(43,43,43,1) 20%, rgba(102,102,102,1) 22%, rgba(89,89,89,1) 32%, rgba(71,71,71,1) 39%, rgba(0,0,0,1) 51%, rgba(19,19,19,1) 61%, rgba(44,44,44,1) 72%, rgba(17,17,17,1) 89%, rgba(28,28,28,1) 91%, rgba(28,28,28,1) 100%);
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+  background: linear-gradient(
+    to right,
+    rgba(76, 76, 76, 1) 0%,
+    rgba(43, 43, 43, 1) 20%,
+    rgba(102, 102, 102, 1) 22%,
+    rgba(89, 89, 89, 1) 32%,
+    rgba(71, 71, 71, 1) 39%,
+    rgba(0, 0, 0, 1) 51%,
+    rgba(19, 19, 19, 1) 61%,
+    rgba(44, 44, 44, 1) 72%,
+    rgba(17, 17, 17, 1) 89%,
+    rgba(28, 28, 28, 1) 91%,
+    rgba(28, 28, 28, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
   flex-wrap: wrap;
 }
@@ -359,14 +367,13 @@ img {
   justify-content: space-around;
 }
 
-
 .navegacion__footer .logo {
-width: 40%;
-margin: 0 auto;
+  width: 40%;
+  margin: 0 auto;
 }
 
 .navegacion__footer ul {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -378,12 +385,12 @@ margin: 0 auto;
   color: var(--blanco);
 }
 
- .direccion p {
+.direccion p {
   margin: 2rem 0;
   color: var(--blanco);
 }
 
-.telefono{
+.telefono {
   color: var(--blanco);
   margin-bottom: 2rem;
 }
@@ -391,9 +398,10 @@ margin: 0 auto;
 .imagen__footer img {
   border-radius: 1rem;
 }
- .parrafo__final {
-   color: var(--blanco);
- }
+
+.parrafo__final {
+  color: var(--blanco);
+}
 
 @media (min-width: 768px) {
   .footer {
@@ -404,14 +412,14 @@ margin: 0 auto;
   .footer .imagen__footer {
     flex: 0 1 40%;
     text-align: center;
-  
   }
 
   .navegacion__footer {
     flex: 0 1 30%;
   }
+
   .navegacion__footer .direccion {
-     align-self: flex-start;
+    align-self: flex-start;
   }
 
   .imagen__footer {
@@ -419,5 +427,3 @@ margin: 0 auto;
     margin: 0 auto;
   }
 }
-
-
