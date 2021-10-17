@@ -331,7 +331,7 @@ img {
   margin: 0 auto;
   background-color: var(--azul);
   color: var(--blanco);
-  letter-spacing: 1rem;
+  letter-spacing: .5rem;
   border: none;
 }
 
