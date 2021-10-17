@@ -333,6 +333,7 @@ img {
   color: var(--blanco);
   letter-spacing: .5rem;
   border: none;
+  border-radius: .5rem;
 }
 
 /*  FOOTER  */
