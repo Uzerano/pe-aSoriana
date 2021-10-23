@@ -379,7 +379,9 @@
 
     const marker = L.marker([40.38260, -3.71145], {
       tittle: 'Mesón La Peña Soriana',
-    }).bindPopup("Mesón La Peña Soriana").addTo(mymap);
+    }).addTo(mymap);
+
+    marker.bindPopup("Mesón La Peña Soriana").openPopup();
   </script>
 
 
