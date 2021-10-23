@@ -2,321 +2,387 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="imagenes/favicon.ico" type="image/ico">
-    <link rel="icon" sizes="196x196" href="apple-touch-icon.png">
-    <meta name="description" content="Bar-Mesón La Peña Soriana, especialistas en Patatas Bravas" />
-    <meta name="keywords" content="Peña, Soriana, Patatas, Bravas" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/estilos.css" />
-    <title>Mesón La Peña Soriana</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="imagenes/favicon.ico" type="image/ico" />
+  <link rel="icon" sizes="196x196" href="apple-touch-icon.png" />
+  <meta name="description" content="Bar-Mesón La Peña Soriana, especialistas en Patatas Bravas" />
+  <meta name="keywords" content="Peña, Soriana, Patatas, Bravas" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <title>Mesón La Peña Soriana</title>
 </head>
 
 <body>
+  <div class="menu contenedor" >
+    <div class="logo">
+      <p>Mesón La Peña Soriana</p>
+    </div>
+ 
+    <nav class="navegacion">
+      <ul>
+          <li><a href="#sobre__nosotros">Sobre Nosotros</a></li>
+          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#comentarios">Comentarios</a></li>
+          <li><a href="#quienesSomos">Quiénes Somos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+      </ul>
+  </nav>
 
-    <div class="menu contenedor">
-        <div class="logo">
-            <p>Mesón La Peña Soriana</p>
+
+</div>
+
+<!-- CABEZERA -->
+<div class="titular">
+  <div class="texto__titular">
+      <h1>Mesón La Peña Soriana <span>Las mejores Patatas Bravas de Madrid</span> </h1>
+  </div>
+</div>
+ 
+
+  <!-- SOBRE NOSOTROS -->
+
+  <main class="contenedor">
+    <div class="sobre__nosotros" id="sobre__nosotros">
+      <h2>Sobre Nosotros</h2>
+      <section class="tarjeta">
+        <h3>Amabilidad</h3>
+        <img src="imagenes/juanjo.webp" alt="Juanjo" />
+        <div class="sobre__nosotros--texto">
+          <p>
+            Trato cercano y exquisito hacia el cliente. Ofrecemos nuestra
+            mejor sonrisa, siempre dispuestos para que vd. salga satisfecho.
+            La amabilidad y el buen trato es una premisa para nosotros.
+          </p>
         </div>
-        <nav class="navegacion">
-            <ul>
-                <li><a href="#sobre__nosotros">Sobre Nosotros</a></li>
-                <li><a href="#especialidades">Especialidades</a></li>
-                <li><a href="#comentarios">Comentarios</a></li>
-                <li><a href="#quienesSomos">Quiénes Somos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-
+      </section>
+      <section class="tarjeta">
+        <h3>Calidad</h3>
+        <img src="imagenes/vinos1.webp" alt="Estanteria de vinos" />
+        <div class="sobre__nosotros--texto">
+          <p>
+            Nuestros productos son de 1ª calidad, con una gran selección de
+            vinos, tanto de la marca Rioja, como de Ribera del Duero. Tenemos
+            productos originarios de Soria, las patatas son las mejores del
+            mercado.
+          </p>
+        </div>
+      </section>
+      <section class="tarjeta">
+        <h3>Profesionalidad</h3>
+        <img src="imagenes/barra2_1.webp" alt="Barra con Juanjo" />
+        <div class="sobre__nosotros--texto">
+          <p>
+            El grado de profesionalidad estará a la altura de sus
+            expectativas, personal muy cualificado para el trabajo al que se
+            dedica. Ponemos todo nuestro amor y cariño en lo que hacemos.
+          </p>
+        </div>
+      </section>
     </div>
 
-    <!-- CABEZERA -->
-    <div class="titular">
-        <div class="texto__titular">
-            <h1>Mesón La Peña Soriana <span>Las mejores Patatas Bravas de Madrid</span> </h1>
+    <!-- ESPECIALIDADES-->
+
+    <div class="especialidades" id="especialidades">
+      <h2>Especialidades</h2>
+      <div class="especialidades__texto">
+        <p>
+          Nuestros platos más queridos por el público que nos visita.
+          Comprueben las delicias que les ofrecemos, los diferentes platos
+          seguro que están al gusto de todos. Esperamos les guste y contemos
+          con su visita.
+        </p>
+      </div>
+      <div class="contenedor__imagenes">
+        <div data-aos="flip-right" class="imagen">
+          <img src="imagenes/bravas.webp" alt="Patatas Bravas" />
+          <p>Patatas Bravas</p>
         </div>
+        <div data-aos="flip-right" class="imagen">
+          <img src="imagenes/alitas.webp" alt="Alitas" />
+          <p>Alitas</p>
+        </div>
+        <div data-aos="flip-right" class="imagen">
+          <img src="imagenes/calamares.webp" alt="Calamares" />
+          <p>Calamares</p>
+        </div>
+        <div data-aos="flip-right" class="imagen">
+          <img src="imagenes/caracoles.webp" alt="Caracoles" />
+          <p>Caracoles</p>
+        </div>
+        <div data-aos="flip-right" class="imagen">
+          <img src="imagenes/croquetas.webp" alt="Croquetas" />
+          <p>Croquetas</p>
+        </div>
+        <div data-aos="flip-right" class="imagen">
+          <img src="imagenes/matrimonio.webp" alt="Matrimonio" />
+          <p>Matrimonio</p>
+        </div>
+        <div data-aos="flip-right" class="imagen">
+          <img src="imagenes/morcilla.webp" alt="Morcilla" />
+          <p>Morcilla</p>
+        </div>
+        <div data-aos="flip-right" class="imagen">
+          <img src="imagenes/oreja.webp" alt="Oreja" />
+          <p>Oreja</p>
+        </div>
+        <div data-aos="flip-right" class="imagen">
+          <img src="imagenes/tortilla.webp" alt="Tortilla" />
+          <p>Tortilla</p>
+        </div>
+      </div>
     </div>
-    
-    <!-- SOBRE NOSOTROS -->
-    
-    <main class=" contenedor">
-        <div class="sobre__nosotros" id="sobre__nosotros">
 
-            <h2>Sobre Nosotros</h2>
-            <section class="tarjeta">
-                <h3>Amabilidad</h3>
-                <img src="imagenes/juanjo.webp" alt="Juanjo">
-                <div class="sobre__nosotros--texto">
-                    <p>Trato cercano y exquisito hacia el cliente. Ofrecemos nuestra mejor sonrisa, siempre dispuestos
-                        para que vd. salga satisfecho. La amabilidad y el buen trato es una premisa para nosotros.</p>
-                </div>
-            </section>
-            <section class="tarjeta">
-                <h3>Calidad</h3>
-                <img src="imagenes/vinos1.webp" alt="Estanteria de vinos">
-                <div class="sobre__nosotros--texto">
-                    <p>Nuestros productos son de 1ª calidad, con una gran selección de vinos, tanto de la marca Rioja,
-                        como de Ribera del Duero. Tenemos productos originarios de Soria, las patatas son las
-                        mejores del mercado.</p>
-                </div>
-            </section>
-            <section class="tarjeta">
-                <h3>Profesionalidad</h3>
-                <img src="imagenes/barra2_1.webp" alt="Barra con Juanjo">
-                <div class="sobre__nosotros--texto">
-                    <p>El grado de profesionalidad estará a la altura de sus expectativas, personal muy cualificado para
-                        el trabajo al que se dedica. Ponemos todo nuestro amor y cariño en lo que hacemos.</p>
-                </div>
-            </section>
-        </div>
+    <!-- COMENTARIOS -->
 
-        <!-- ESPECIALIDADES-->
-
-        <div class="especialidades" id="especialidades">
-            <h2>Especialidades</h2>
-            <div class="especialidades__texto">
-                <p>Nuestros platos más queridos por el público que nos visita. Comprueben las delicias que les
-                    ofrecemos, los diferentes platos seguro que están al gusto de todos. Esperamos les guste y contemos
-                    con su visita.</p>
+    <div class="comentarios" id="comentarios">
+      <h2>Comentarios</h2>
+      <div class="contenido__comentarios">
+        <div class="primero" data-aos="flip-left">
+          <div class="nombre">
+            <p>David G.</p>
+            <div class="estrellas">
+              <img src="imagenes/estrellas.png" alt="Estrellas" />
             </div>
-            <div class="contenedor__imagenes">
-                <div data-aos="flip-right" class="imagen ">
-                    <img src="imagenes/bravas.webp" alt="Patatas Bravas">
-                    <p>Patatas Bravas</p>
-                </div>
-                <div data-aos="flip-right" class="imagen">
-                    <img src="imagenes/alitas.webp" alt="Alitas">
-                    <p>Alitas</p>
-                </div>
-                <div data-aos="flip-right" class="imagen">
-                    <img src="imagenes/calamares.webp" alt="Calamares">
-                    <p>Calamares</p>
-                </div>
-                <div data-aos="flip-right" class="imagen">
-                    <img src="imagenes/caracoles.webp" alt="Caracoles">
-                    <p>Caracoles</p>
-                </div>
-                <div data-aos="flip-right" class="imagen">
-                    <img src="imagenes/croquetas.webp" alt="Croquetas">
-                    <p>Croquetas</p>
-                </div>
-                <div data-aos="flip-right" class="imagen">
-                    <img src="imagenes/matrimonio.webp" alt="Matrimonio">
-                    <p>Matrimonio</p>
-                </div>
-                <div data-aos="flip-right" class="imagen">
-                    <img src="imagenes/morcilla.webp" alt="Morcilla">
-                    <p>Morcilla</p>
-                </div>
-                <div data-aos="flip-right" class="imagen">
-                    <img src="imagenes/oreja.webp" alt="Oreja">
-                    <p>Oreja</p>
-                </div>
-                <div data-aos="flip-right" class="imagen">
-                    <img src="imagenes/tortilla.webp" alt="Tortilla">
-                    <p>Tortilla</p>
-                </div>
-            </div>
+          </div>
+          <small>Hace un año</small>
+          <p class="parrafo">
+            Local con muy buena ubicación en el barrio de Usera un trato
+            correcto y agradable gran calidad de sus platos tapas raciones
+            etc... en especial sus patatas bravas qué son riquísimas. Variedad
+            de bebidas y un vermut de grifo 100% recomendable calidad precio
+            no duden en probar en este bar típico de Madrid
+          </p>
         </div>
-
-
-
-        <!-- COMENTARIOS -->
-
-        <div class="comentarios" id="comentarios">
-            <h2>Comentarios</h2>
-            <div class="contenido__comentarios">
-                <div class="primero" data-aos="flip-left">
-                    <div class="nombre">
-                        <p>David G.</p>
-                        <div class="estrellas">
-                            <img src="imagenes/estrellas.png" alt="Estrellas">
-                        </div>
-
-                    </div>
-                    <small>Hace un año</small>
-                    <p class="parrafo">Local con muy buena ubicación en el barrio de Usera un trato correcto y agradable
-                        gran calidad de sus platos tapas raciones etc... en especial sus patatas bravas qué son
-                        riquísimas. Variedad de bebidas y un vermut de grifo 100% recomendable calidad precio no duden
-                        en probar en este bar típico de Madrid</p>
-                </div>
-                <div class="segundo" data-aos="flip-left">
-                    <div class="nombre">
-                        <p>Eva C.</p>
-                        <div class="estrellas">
-                            <img src="imagenes/estrellas.png" alt="Estrellas">
-                        </div>
-                    </div>
-                    <small>Hace 2 mese</small>
-                    <p class="parrafo">Bar de los de toda la vida, con una atención estupenda, una cerveza bien tirada y
-                        unas raciones muy ricas a un precio razonable. Buenísimas las bravas, los torreznos y los
-                        calamares(que no son congelados). Volveremos.</p>
-                </div>
-                <div class="tercero" data-aos="flip-left">
-                    <div class="nombre">
-                        <p>Lorena G.</p>
-                        <div class="estrellas">
-                            <img src="imagenes/estrellas.png" alt="Estrellas">
-                        </div>
-                    </div>
-                    <small>HAce 6 meses</small>
-                    <p class="parrafo">Soy clienta habitual y lo que más me gusta es la amabilidad de los camareros y la
-                        ración de bravas, exquisitas, de las mejores. Recomiendo este bar para pasar un buen rato en
-                        compañía de amigos. Además, buenos precios y muy buena calidad de sus productos.</p>
-                </div>
-                <div class="cuarto" data-aos="flip-right">
-                    <div class="nombre">
-                        <p>James F.</p>
-                        <div class="estrellas">
-                            <img src="imagenes/estrellas.png" alt="Estrellas">
-                        </div>
-                    </div>
-                    <small>Hace 2 años</small>
-                    <p class="parrafo">Si estás buscando un rinconcito de Soria, lo tienes aquí en el 58 de la calle
-                        Fornillos Usera. Aquí encontrarás las famosas Barritas Energéticas que te ayudarán a recuperar
-                        fuerzas y engreir a tu lado más goloso.
-
-                        Eres fan de las patatas bravas, éste el lugar ideal, son patas bravas de verdad, pican. (la
-                        salsa reza en un anuncio: patentadas con registro sanitario).
-
-                        Si te saben a poco las patatas, pidete una ración de oreja, calamares, sepia, caracoles,
-                        zarajos, morcilla, una de picada, esta muy buenas y ricas.
-                    </p>
-                </div>
-                <div class="quinto" data-aos="flip-right">
-                    <div class="nombre">
-                        <p>Mayte G.</p>
-                        <div class="estrellas">
-                            <img src="imagenes/estrellas.png" alt="Estrellas">
-                        </div>
-                    </div>
-                    <small>Hace 9 meses</small>
-                    <p class="parrafo">Un sitio perfecto para disfrutar de las mejores patatas bravas y un montón de
-                        raciones riquísimas y tengo la suerte de vivir a 10 minutos.</p>
-                </div>
-                <div class="sexto" data-aos="flip-right">
-                    <div class="nombre">
-                        <p>Fernando R.</p>
-                        <div class="estrellas">
-                            <img src="imagenes/estrellas.png" alt="Estrellas">
-                        </div>
-                    </div>
-                    <small>Hace 10 meses</small>
-                    <p class="parrafo">Buen sitio para tomar cañas, también tienen buenos vinos...plato estrella Las
-                        Bravas muy ricas, buenos profesionales, precios populares. Una visita obligatoria.d</p>
-                </div>
+        <div class="segundo" data-aos="flip-left">
+          <div class="nombre">
+            <p>Eva C.</p>
+            <div class="estrellas">
+              <img src="imagenes/estrellas.png" alt="Estrellas" />
             </div>
-        
+          </div>
+          <small>Hace 2 mese</small>
+          <p class="parrafo">
+            Bar de los de toda la vida, con una atención estupenda, una
+            cerveza bien tirada y unas raciones muy ricas a un precio
+            razonable. Buenísimas las bravas, los torreznos y los
+            calamares(que no son congelados). Volveremos.
+          </p>
         </div>
-
-        <!-- QUIENES sOMOS -->
-        
-        <div class="quienesSomos" id="quienesSomos">
-            <div class="quienesSomos__contenido">
-                             <h2>Quiénes Somos</h2>
-                
-                        <div class="imagen__tarjeta">
-                            <img src="imagenes/jefe.webp" alt="">
-                            <p>Juanjo, Gerente.</p>
-                        </div>
-                        <div class="imagen__tarjeta">
-                            <img src="imagenes/ester.webp" alt="">
-                            <p>Ester, Jefa de cocina.</p>
-                        </div>
-                        <div class="imagen__tarjeta">
-                            <img src="imagenes/felipe.webp" alt="">
-                            <p>Felipe, camarero.</p>
-                        </div>
-                        <div class="imagen__tarjeta">
-                            <img src="imagenes/ines.webp" alt="">
-                            <p>Inés, cocinera.</p>
-                        </div>
-                    
+        <div class="tercero" data-aos="flip-left">
+          <div class="nombre">
+            <p>Lorena G.</p>
+            <div class="estrellas">
+              <img src="imagenes/estrellas.png" alt="Estrellas" />
             </div>
+          </div>
+          <small>HAce 6 meses</small>
+          <p class="parrafo">
+            Soy clienta habitual y lo que más me gusta es la amabilidad de los
+            camareros y la ración de bravas, exquisitas, de las mejores.
+            Recomiendo este bar para pasar un buen rato en compañía de amigos.
+            Además, buenos precios y muy buena calidad de sus productos.
+          </p>
         </div>
-
-        <!-- CONTACTO  -->
-        
-        <div id="contacto" class="contacto">
-            <h2>Contacto</h2>
-            <div class="contenido__contacto">
-                <p>Nos encontramos en el barrio de Usera, cerca de la Plaza de Fernandez Ladreda, línea 6 de metro, parada Plaza Elíptica.
-                Calle de Fornillos Nº 58, semiesquina con calle Marcelo Usera.
-                Si les apetece visitar el Mesón será mejor que reserven llamando  al teléfono 645 62 65 48.</p>
+        <div class="cuarto" data-aos="flip-right">
+          <div class="nombre">
+            <p>James F.</p>
+            <div class="estrellas">
+              <img src="imagenes/estrellas.png" alt="Estrellas" />
             </div>
-                            <h3>Formulario de Contacto</h3>
-            <form action="POST" name="contacto" data-netlify="true" class="formulario">
-                <div class="campo">
-                    <label for="nombre" class="etiqueta">Nombre</label>
-                    <input type="text" class="campo__nombre" placeholder="Tu Nombre">
-                </div>
-                <div class="campo">
-                    <label for="email" class="etiqueta">Email</label>
-                    <input type="email" class="campo__email" placeholder="Tu Email">
-                </div>
-                <div class="campo">
-                    <label for="mensaje" class="etiqueta">Mensaje</label>
-                    <textarea name="mensaje" class="campo__mensaje" placeholder="Tu Mensaje"></textarea>
-                </div>
-                <div class="campo">
-                   <input type="submit" value="Enviar" class="enviar">
-                </div>
-            </form>
-            
+          </div>
+          <small>Hace 2 años</small>
+          <p class="parrafo">
+            Si estás buscando un rinconcito de Soria, lo tienes aquí en el 58
+            de la calle Fornillos Usera. Aquí encontrarás las famosas Barritas
+            Energéticas que te ayudarán a recuperar fuerzas y engreir a tu
+            lado más goloso. Eres fan de las patatas bravas, éste el lugar
+            ideal, son patas bravas de verdad, pican. (la salsa reza en un
+            anuncio: patentadas con registro sanitario). Si te saben a poco
+            las patatas, pidete una ración de oreja, calamares, sepia,
+            caracoles, zarajos, morcilla, una de picada, esta muy buenas y
+            ricas.
+          </p>
         </div>
-    </main>
+        <div class="quinto" data-aos="flip-right">
+          <div class="nombre">
+            <p>Mayte G.</p>
+            <div class="estrellas">
+              <img src="imagenes/estrellas.png" alt="Estrellas" />
+            </div>
+          </div>
+          <small>Hace 9 meses</small>
+          <p class="parrafo">
+            Un sitio perfecto para disfrutar de las mejores patatas bravas y
+            un montón de raciones riquísimas y tengo la suerte de vivir a 10
+            minutos.
+          </p>
+        </div>
+        <div class="sexto" data-aos="flip-right">
+          <div class="nombre">
+            <p>Fernando R.</p>
+            <div class="estrellas">
+              <img src="imagenes/estrellas.png" alt="Estrellas" />
+            </div>
+          </div>
+          <small>Hace 10 meses</small>
+          <p class="parrafo">
+            Buen sitio para tomar cañas, también tienen buenos vinos...plato
+            estrella Las Bravas muy ricas, buenos profesionales, precios
+            populares. Una visita obligatoria.d
+          </p>
+        </div>
+      </div>
+    </div>
 
-        <!-- FOOTER -->
+    <!-- QUIENES sOMOS -->
 
-        <footer class="footer">
-                 
-                     <nav class="navegacion__footer">
-                         <div class="logo">
-                             <a href="#"><img src="imagenes/logo1.png" alt="Foto del Logo"></a>
-                         </div>
-                         <ul>
-                             <li><a href="#sobre__nosotros">Sobre Nosotros</a></li>
-                             <li><a href="#especialidades">Especialidades</a></li>
-                             <li><a href="#comentarios">Comentarios</a></li>
-                             <li><a href="#quienesSomos">Quiénes Somos</a></li>
-                             <li><a href="#contacto">Contacto</a></li>
-                         </ul>
-                     </nav>
-         
-                     <div class="direccion">
-                         <address>
-                             <p>Mesón La Peña Soriana</p>
-                             <p>Calle Fornillos Nº 58 <br>
-                                Madrid 28026</p>
-                                <span class="telefono">Telf. 645 62 65 48</span>
-                         </address>
-                     </div>
-         
-                     <div class="imagen__footer">
-                         <img src="imagenes/barra1_1.webp" alt="Foto de Juanjo">
-                     </div>
+    <div class="quienesSomos" id="quienesSomos">
+      <div class="quienesSomos__contenido">
+        <h2>Quiénes Somos</h2>
 
-                
-        
-            <p class="parrafo__final">&copy;Copyright 2021. Luis Adán Ropero. Todos los derechos reservados</p>
-        </footer>
+        <div class="imagen__tarjeta">
+          <img src="imagenes/jefe.webp" alt="" />
+          <p>Juanjo, Gerente.</p>
+        </div>
+        <div class="imagen__tarjeta">
+          <img src="imagenes/ester.webp" alt="" />
+          <p>Ester, Jefa de cocina.</p>
+        </div>
+        <div class="imagen__tarjeta">
+          <img src="imagenes/felipe.webp" alt="" />
+          <p>Felipe, camarero.</p>
+        </div>
+        <div class="imagen__tarjeta">
+          <img src="imagenes/ines.webp" alt="" />
+          <p>Inés, cocinera.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACTO  -->
+
+    <div id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <div class="contenido__contacto">
+        <p>
+          Nos encontramos en el barrio de Usera, cerca de la Plaza de
+          Fernandez Ladreda, línea 6 de metro, parada Plaza Elíptica. Calle de
+          Fornillos Nº 58, semiesquina con calle Marcelo Usera. Si les apetece
+          visitar el Mesón será mejor que reserven llamando al teléfono 645 62
+          65 48.
+        </p>
+      </div>
+
+      <div id="mapid"></div>
+      <h3>Formulario de Contacto</h3>
+      <form action="POST" name="contacto" data-netlify="true" class="formulario">
+        <div class="campo">
+          <label for="nombre" class="etiqueta">Nombre</label>
+          <input type="text" class="campo__nombre" placeholder="Tu Nombre" />
+        </div>
+        <div class="campo">
+          <label for="email" class="etiqueta">Email</label>
+          <input type="email" class="campo__email" placeholder="Tu Email" />
+        </div>
+        <div class="campo">
+          <label for="mensaje" class="etiqueta">Mensaje</label>
+          <textarea name="mensaje" class="campo__mensaje" placeholder="Tu Mensaje"></textarea>
+        </div>
+        <div class="campo">
+          <input type="submit" value="Enviar" class="enviar" />
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+    <nav class="navegacion__footer">
+      <div class="logo">
+        <a href="#"><img src="imagenes/logo1.png" alt="Foto del Logo" /></a>
+      </div>
+      <ul>
+        <li><a href="#sobre__nosotros">Sobre Nosotros</a></li>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#comentarios">Comentarios</a></li>
+        <li><a href="#quienesSomos">Quiénes Somos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
 
 
-   
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <div class="direccion">
+      <address>
+        <p>Mesón La Peña Soriana</p>
+        <p>
+          Calle Fornillos Nº 58 <br />
+          Madrid 28026
+        </p>
+        <span class="telefono">Telf. 645 62 65 48</span>
+      </address>
+    </div>
+
+    <div class="imagen__footer">
+      <img src="imagenes/barra1_1.webp" alt="Foto de Juanjo" />
+    </div>
+
+    <div class="redes">
+      <ul>
+        <li>
+          <a class="facebook iconos" href="https://www.facebook.com/Bar-La-Pe%C3%B1a-Soriana-963835120339056"><i
+              class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a class="instagram iconos"
+            href="https://www.instagram.com/explore/locations/1031150492/bar-la-pena-soriana/"><i
+              class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+          <a class=" whatsapp iconos" href="https://api.whatsapp.com/send?phone=+34645626548"""><i
+              class="fab fa-whatsapp"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <p class="parrafo__final">
+      &copy;Copyright 2021. Luis Adán Ropero. Todos los derechos reservados
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+ 
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    const mymap = L.map('mapid').setView([40.38285, -3.71110], 13);
+
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(mymap);
+
+
+
+    const marker = L.marker([40.38260, -3.71145], {
+      tittle: 'Mesón La Peña Soriana',
+    }).bindPopup("Mesón La Peña Soriana").addTo(mymap);
+  </script>
+
+
 
 </body>
 
