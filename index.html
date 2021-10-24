@@ -370,8 +370,7 @@
   </script>
 
   <script>
-    const mymap = L.map('mapid', {center: [40.4778, -3.723],
-    zoom: 13});
+    const mymap = L.map('mapid').setView([40.4165, -3.70256], 13);
  
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -382,7 +381,11 @@
       zoomOffset: -1,
       accessToken: 'pk.eyJ1IjoidXplcmFubyIsImEiOiJja3Y0ejl4OXMwMjl4MnBwajAwcThpcW80In0.wSbMKDMguTuFMBx7CMMANA'
     }).addTo(mymap);
-
+     
+    mymap.locate({
+      setView: true,
+      maxZooom: 16
+    });
 
     const marker = L.marker([40.38260, -3.71145], {
       tittle: 'Mesón La Peña Soriana',
