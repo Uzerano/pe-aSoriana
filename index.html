@@ -430,6 +430,65 @@ buttonInstall.addEventListener('click', async () => {
 });
   </script>
 
+  <script>
+    button.onclick = function() {
+  const startPos;
+  const element = document.getElementById("nudge");
+
+  const showNudgeBanner = function() {
+    nudge.style.display = "block";
+  };
+
+  const hideNudgeBanner = function() {
+    nudge.style.display = "none";
+  };
+
+  const nudgeTimeoutId = setTimeout(showNudgeBanner, 5000);
+
+  const geoSuccess = function(position) {
+    hideNudgeBanner();
+    // We have the location, don't display banner
+    clearTimeout(nudgeTimeoutId); 
+
+    // Do magic with location
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  const geoError = function(error) {
+    switch(error.code) {
+      case error.TIMEOUT:
+        // The user didn't accept the callout
+        showNudgeBanner();
+        break;
+  };
+
+  navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+};
+    };
+
+window.onload = function() {
+  const startPos;
+  const geoPositions = {
+    maximunAge: 5 * 60 * 1000,
+  }
+  const geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  const geoError = function(error) {
+    console.log('Error occurred. Error code: ' + error.code);
+    // error.code can be:
+    //   0: unknown error
+    //   1: permission denied
+    //   2: position unavailable (error response from location provider)
+    //   3: timed out
+  };
+  navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+};
+  </script>
+
 
 
 

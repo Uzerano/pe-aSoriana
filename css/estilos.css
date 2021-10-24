@@ -175,26 +175,7 @@ img {
   margin-top: 2rem;
 }
 
-.boton {
-  width: 30rem;
-  margin: 0 auto;
-}
 
-.boton p button {
-  padding: 1rem 2rem;
-  background-color: var(--azul);
-  color: var(--blanco);
-  border: none;
-  text-transform: uppercase;
-  letter-spacing: .5rem;
-  border-radius: 1rem;
-}
-
-#out{
-  width: 30rem;
-  margin: 0 auto;
- 
-}
 /* CABEZERA */
 
 .sobre__nosotros {
