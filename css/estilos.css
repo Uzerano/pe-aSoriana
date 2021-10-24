@@ -304,8 +304,16 @@ img {
 
 #mapid {
   height: 20rem;
-  width: 50%;
+  width: 95%;
   margin: 0 auto;
+}
+
+@media (min-width: 768px){
+  #mapid {
+    height: 40rem;
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
 .formulario {
@@ -424,6 +432,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 
 .redes ul li a {

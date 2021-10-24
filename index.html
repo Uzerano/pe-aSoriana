@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="icon" href="imagenes/favicon.ico" type="image/ico" />
   <link rel="icon" sizes="196x196" href="apple-touch-icon.png" />
   <meta name="description" content="Bar-Mesón La Peña Soriana, especialistas en Patatas Bravas" />
@@ -369,20 +369,46 @@
   </script>
 
   <script>
-    const mymap = L.map('mapid').setView([40.38285, -3.71110], 13);
+    const mymap = L.map('mapid').setView([40.4165, -3.70256], 13);
+    
 
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(mymap);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoidXplcmFubyIsImEiOiJja3Y0ejl4OXMwMjl4MnBwajAwcThpcW80In0.wSbMKDMguTuFMBx7CMMANA'
+}).addTo(mymap);
 
 
 
-    const marker = L.marker([40.38260, -3.71145], {
+
+    mymap.locate({setView: true, maxZoom: 16});
+
+    function localiza(e) {
+      const redondo = e.accuracy;
+
+      L.marker(e.latlng).addTo(mymap).bindPopup('Estás aquí').openPopup();
+      L.circle(e.latlng, redondo).addTo(mymap);
+    }
+
+    mymap.on('locationfound', localiza);
+
+   function errorLocaliza(e) {
+     alert(e.message);
+   }
+
+   mymap.on('locationerror', errorLocaliza);
+
+   const marker = L.marker([40.38260, -3.71145], {
       tittle: 'Mesón La Peña Soriana',
     }).addTo(mymap);
 
-    marker.bindPopup("Mesón La Peña Soriana").openPopup();
+    marker.bindPopup("<b>Mesón</b><br><b>La Peña Soriana</b>").openPopup();
   </script>
+
+
 
 
 
