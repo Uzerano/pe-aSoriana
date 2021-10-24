@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin="" />
-  <link rel="stylesheet" href="https://github.com/GoogleChrome/lighthouse.git">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <link rel="stylesheet" href="css/normalize.css" />
@@ -401,93 +400,8 @@
     marker.bindPopup("<b>Mesón</b><br><b>La Peña Soriana</b>").openPopup();
   </script>
 
-  <script>
-    // Initialize deferredPrompt for use later to show browser install prompt.
-let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent the mini-infobar from appearing on mobile
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // Update UI notify the user they can install the PWA
-  showInstallPromotion();
-  // Optionally, send analytics event that PWA install promo was shown.
-  console.log(`'beforeinstallprompt' event was fired.`);
-});
 
-buttonInstall.addEventListener('click', async () => {
-  // Hide the app provided install promotion
-  hideInstallPromotion();
-  // Show the install prompt
-  deferredPrompt.prompt();
-  // Wait for the user to respond to the prompt
-  const { outcome } = await deferredPrompt.userChoice;
-  // Optionally, send analytics event with outcome of user choice
-  console.log(`User response to the install prompt: ${outcome}`);
-  // We've used the prompt, and can't use it again, throw it away
-  deferredPrompt = null;
-});
-  </script>
-
-  <script>
-    button.onclick = function() {
-  const startPos;
-  const element = document.getElementById("nudge");
-
-  const showNudgeBanner = function() {
-    nudge.style.display = "block";
-  };
-
-  const hideNudgeBanner = function() {
-    nudge.style.display = "none";
-  };
-
-  const nudgeTimeoutId = setTimeout(showNudgeBanner, 5000);
-
-  const geoSuccess = function(position) {
-    hideNudgeBanner();
-    // We have the location, don't display banner
-    clearTimeout(nudgeTimeoutId); 
-
-    // Do magic with location
-    startPos = position;
-    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
-  };
-  const geoError = function(error) {
-    switch(error.code) {
-      case error.TIMEOUT:
-        // The user didn't accept the callout
-        showNudgeBanner();
-        break;
-  };
-
-  navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
-};
-    };
-
-window.onload = function() {
-  const startPos;
-  const geoPositions = {
-    maximunAge: 5 * 60 * 1000,
-  }
-  const geoSuccess = function(position) {
-    startPos = position;
-    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
-  };
-  const geoError = function(error) {
-    console.log('Error occurred. Error code: ' + error.code);
-    // error.code can be:
-    //   0: unknown error
-    //   1: permission denied
-    //   2: position unavailable (error response from location provider)
-    //   3: timed out
-  };
-  navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
-};
-  </script>
 
 
 
