@@ -4,8 +4,8 @@
   --fuentePrincipal: "Open sans", sans-serif;
   --fuenteSecundaria: "Roboto Condensed", sans-serif;
   /* COLORES */
-  --colorPrincipal: #290000;
-  --secundario: #f8f5f5;
+  --colorPrincipal: #ff0000;
+  --secundario: #fdfafa;
   --blanco: #fff;
   --negro: #000;
   --gris: #edeaea;
@@ -105,7 +105,7 @@ img {
 
 .logo p {
   text-transform: uppercase;
-  color: var(--negro);
+  color: var(--colorPrincipal);
   font-family: "Open Sans";
   font-weight: bold;
   letter-spacing: 0.5rem;
@@ -257,6 +257,7 @@ img {
 
 .comentarios .parrafo {
   line-height: 3rem;
+  font-family: var(--fuentePrincipal);
 }
 
 @media (min-width: 768px) {
