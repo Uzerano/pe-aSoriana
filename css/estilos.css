@@ -4,7 +4,7 @@
   --fuentePrincipal: "Open sans", sans-serif;
   --fuenteSecundaria: "Roboto Condensed", sans-serif;
   /* COLORES */
-  --colorPrincipal: #f00;
+  --colorPrincipal: #290000;
   --secundario: #f8f5f5;
   --blanco: #fff;
   --negro: #000;
@@ -105,7 +105,7 @@ img {
 
 .logo p {
   text-transform: uppercase;
-  color: var(--colorPrincipal);
+  color: var(--negro);
   font-family: "Open Sans";
   font-weight: bold;
   letter-spacing: 0.5rem;

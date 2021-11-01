@@ -293,15 +293,15 @@
       <form action="POST" name="contacto" data-netlify="true" class="formulario">
         <div class="campo">
           <label for="nombre" class="etiqueta">Nombre</label>
-          <input type="text" class="campo__nombre" placeholder="Tu Nombre" />
+          <input type="text" class="campo__nombre" />
         </div>
         <div class="campo">
           <label for="email" class="etiqueta">Email</label>
-          <input type="email" class="campo__email" placeholder="Tu Email" />
+          <input type="email" class="campo__email" />
         </div>
         <div class="campo">
           <label for="mensaje" class="etiqueta">Mensaje</label>
-          <textarea name="mensaje" class="campo__mensaje" placeholder="Tu Mensaje"></textarea>
+          <textarea name="mensaje" class="campo__mensaje"></textarea>
         </div>
         <div class="campo">
           <input type="submit" value="Enviar" class="enviar" />
@@ -370,14 +370,14 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
- 
+
   <script>
     AOS.init();
   </script>
 
   <script>
     const mymap = L.map('mapid').setView([40.4165, -3.70256], 13);
-  
+
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
@@ -387,36 +387,34 @@
       accessToken: 'pk.eyJ1IjoidXplcmFubyIsImEiOiJja3Y0ejl4OXMwMjl4MnBwajAwcThpcW80In0.wSbMKDMguTuFMBx7CMMANA'
     }).addTo(mymap);
 
-      function ubicacion(){
-        const click = document.querySelector('#mymap');
-        mymap.locate({
-          setView : true,
-          maxZoom : 16
-        });
-      };
+    function ubicacion() {
+      const click = document.querySelector('#mymap');
+      mymap.locate({
+        setView: true,
+        maxZoom: 16
+      });
+    };
 
-      setInterval(ubicacion, 6000);
-
-      
-      
+    setInterval(ubicacion, 3000);
 
     const marker = L.marker([40.38260, -3.71145], {
       tittle: 'Mesón La Peña Soriana',
     }).addTo(mymap);
 
     marker.bindPopup("<b>Mesón</b><br><b>La Peña Soriana</b>").openPopup();
-
   </script>
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
