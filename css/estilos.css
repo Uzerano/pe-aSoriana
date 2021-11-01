@@ -255,6 +255,10 @@ img {
   margin-left: 1rem;
 }
 
+.comentarios .parrafo {
+  line-height: 3rem;
+}
+
 @media (min-width: 768px) {
   .contenido__comentarios {
     display: grid;

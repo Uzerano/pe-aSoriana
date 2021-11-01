@@ -19,7 +19,8 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin="" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel=”stylesheet” type=”text/css” href=”css/oui-css/oui.css”/> 
+  <link rel="stylesheet"   href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/estilos.css" />
@@ -387,15 +388,10 @@
       accessToken: 'pk.eyJ1IjoidXplcmFubyIsImEiOiJja3Y0ejl4OXMwMjl4MnBwajAwcThpcW80In0.wSbMKDMguTuFMBx7CMMANA'
     }).addTo(mymap);
 
-    function ubicacion() {
-      const click = document.querySelector('#mymap');
-      mymap.locate({
-        setView: true,
-        maxZoom: 16
-      });
-    };
-
-    setInterval(ubicacion, 3000);
+    mymap.locate({
+      setView: true,
+      maxZoom: 16
+    });
 
     const marker = L.marker([40.38260, -3.71145], {
       tittle: 'Mesón La Peña Soriana',
@@ -406,15 +402,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
