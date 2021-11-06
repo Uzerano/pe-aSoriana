@@ -1,0 +1,22 @@
+{
+  "background_color": "#ffffff",
+  "description": "Bar-Mesón La Peña Soriana, especialistas en Patatas Bravas",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "webpenasoriana.netlify",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "webpenasoriana.netlify",
+  "start_url": "/",
+  "theme_color": "black",
+  "icons": [
+    {
+      "src": "imagenes/favicon.ico",
+      "type": "image/ico"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "196x196"
+    }
+  ]
+}

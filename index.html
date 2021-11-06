@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name=" theme-color" media="(prefers-color-scheme: light)" content="white" />
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+  <link rel="manifest" href="manifest.json">
   <link rel="icon" href="imagenes/favicon.ico" type="image/ico" />
   <link rel="icon" sizes="196x196" href="apple-touch-icon.png" />
   <meta name="description" content="Bar-Mesón La Peña Soriana, especialistas en Patatas Bravas" />
@@ -25,6 +26,11 @@
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/estilos.css" />
   <title>Mesón La Peña Soriana</title>
+  <script type="module">
+    import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+    const el = document.createElement('pwa-update');
+    document.body.appendChild(el);
+ </script>
 </head>
 
 <body>
