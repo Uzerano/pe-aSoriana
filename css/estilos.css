@@ -100,7 +100,12 @@ img {
 
 .navegacion {
   width: 100%;
-  background-color: var(--negro);
+  background-color: var(--blanco);
+}
+
+.navegacion ul li {
+  padding: .5rem 2rem;
+  border-bottom: 1px solid #ccc;
 }
 
 .logo p {
@@ -113,8 +118,9 @@ img {
 }
 
 .navegacion ul li a {
-  color: var(--blanco);
+  color: var(--negro);
   font-family: var(--fuenteSecundaria);
+  font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
@@ -139,7 +145,6 @@ img {
 
   .navegacion ul li a:hover {
     color: var(--colorPrincipal);
-    font-weight: bold;
   }
 }
 
@@ -314,7 +319,7 @@ img {
   margin: 0 auto;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   #mapid {
     height: 40rem;
     width: 70%;
