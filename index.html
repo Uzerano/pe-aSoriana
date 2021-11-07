@@ -9,8 +9,8 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="imagenes/favicon.ico" type="image/ico" />
- <link rel="apple-touch-icon" sizes="57x57" href="imagenes/apple-touch-icon-57x57.png">
- <link rel="apple-touch-icon" sizes="114x114" href="imagenes/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="imagenes/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="imagenes/apple-touch-icon-114x114.png">
   <meta name="description" content="Bar-Mesón La Peña Soriana, especialistas en Patatas Bravas" />
   <meta name="keywords" content="Peña, Soriana, Patatas, Bravas" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,14 +21,14 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin="" />
-  <link rel=”stylesheet” type=”text/css” href=”css/oui-css/oui.css”/> 
-  <link rel="stylesheet"   href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel=”stylesheet” type=”text/css” href=”css/oui-css/oui.css”/> <link rel="stylesheet"
+    href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/estilos.css" />
   <title>Mesón La Peña Soriana</title>
   <script type="module">
-    import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+    import('https://storage.googleapis.com/workbox-cdn/releases/6.1.5/workbox-sw.js');
     const el = document.createElement('pwa-update');
     document.body.appendChild(el);
  </script>
@@ -294,6 +294,7 @@
       </div>
 
       <div id="mapid"></div>
+
       <h3>Formulario de Contacto</h3>
       <form action="POST" name="contacto" data-netlify="true" class="formulario">
         <div class="campo">
@@ -392,10 +393,36 @@
       accessToken: 'pk.eyJ1IjoidXplcmFubyIsImEiOiJja3Y0ejl4OXMwMjl4MnBwajAwcThpcW80In0.wSbMKDMguTuFMBx7CMMANA'
     }).addTo(mymap);
 
-    mymap.locate({
-      setView: true,
-      maxZoom: 16
-    });
+
+    mapid.onclick = function ubicacion() {
+      const mostrarMensaje = window.confirm('¿Nos permites usar tú ubicación?');
+
+      if (mostrarMensaje === true) {
+        window.alert('Gracias...');
+
+        if (navigator.geolocation) {
+          mymap.locate({
+            setView: true,
+            maxZoom: 16
+          });
+
+          function onLocationFound(e) {
+            var radius = e.accuracy;
+
+            L.marker(e.latlng).addTo(mymap)
+              .bindPopup("Estas aquí").openPopup();
+
+            L.circle(e.latlng, radius).addTo(mymap);
+          }
+
+          mymap.on('locationfound', onLocationFound);
+          this.onclick = null;
+        }
+      } else {
+        window.alert('Gracias de todos modos, disfrute de su visita.');
+        this.onclick = null;
+      };
+    };
 
     const marker = L.marker([40.38260, -3.71145], {
       tittle: 'Mesón La Peña Soriana',
@@ -406,3 +433,23 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
