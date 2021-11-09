@@ -376,7 +376,7 @@ img {
 }
 
 input:invalid:required {
-  background-image: linear-gradient(to right, #ccc, lightgreen);
+  background-image: linear-gradient(to right, #ccc, lightblue);
 }
 
 .enviar {
