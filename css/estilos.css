@@ -368,6 +368,10 @@ img {
   border-bottom: 1px solid var(--azulClaro);
 }
 
+input:invalid:required {
+  background-image: linear-gradient(to right, #ccc, lightgreen);
+}
+
 .enviar {
   display: inline-block;
   padding: 1rem 3rem;
