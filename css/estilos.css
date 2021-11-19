@@ -391,6 +391,8 @@ input:invalid:required {
   border-radius: 0.5rem;
 }
 
+
+
 /*  FOOTER  */
 
 .footer {
@@ -449,6 +451,8 @@ input:invalid:required {
   color: var(--blanco);
 }
 
+
+
 .telefono {
   color: var(--blanco);
   margin-bottom: 2rem;
@@ -486,6 +490,17 @@ input:invalid:required {
 .redes ul li a i {
   color: var(--blanco);
 }
+
+.parrafo__final small a {
+  color: var(--blanco) ;
+}
+
+.body {
+  background-color: var(--blanco);
+  padding: 3rem 0;
+}
+
+
 
 @media (min-width: 768px) {
   .footer {

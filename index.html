@@ -27,19 +27,11 @@
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/estilos.css" />
   <title>Mesón La Peña Soriana</title>
-  <script>
-    import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-  
-  const el = document.createElement('pwa-update');
-  document.body.appendChild(el);
-  </script>
- </script>
- 
 </head>
 
          
 
-<body>
+<body >
   <div class="menu contenedor">
     <div class="logo">
       <p>Mesón La Peña Soriana</p>
@@ -319,6 +311,7 @@
           <label for="mensaje" class="etiqueta">Mensaje</label>
           <textarea name="mensaje" class="campo__mensaje"></textarea>
         </div>
+     
         <div class="campo">
           <input type="submit" value="Enviar" class="enviar"/>
         </div>
@@ -352,6 +345,7 @@
           Madrid 28026
         </p>
         <span class="telefono">Telf. 645 62 65 48</span>
+       
       </address>
     </div>
 
@@ -378,10 +372,12 @@
     </div>
 
     <p class="parrafo__final">
-      &copy;Copyright 2021. Luis Adán Ropero. Todos los derechos reservados
+      &copy;Copyright 2021. Luis Adán Ropero. Todos los derechos reservados.
+      <small> <a href="politica.html">Política de Privacidad Y Cookies</a> </small>
     </p>
   </footer>
 
+  <script src="js/script.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -389,7 +385,9 @@
 
   <script>
     AOS.init();
+
   </script>
+
 
   <script>
     const mymap = L.map('mapid').setView([40.4165, -3.70256], 13);
@@ -406,7 +404,7 @@
 
     mapid.onclick = function ubicacion() {
       const mostrarMensaje = window.confirm('¿Nos permites usar tú ubicación?');
-
+   
       if (mostrarMensaje === true) {
         window.alert('Gracias...');
 
@@ -426,7 +424,7 @@
           }
 
           mymap.on('locationfound', onLocationFound);
-         
+          
           this.onclick = null;
         }
       } else {
@@ -442,13 +440,6 @@
     marker.bindPopup("<b>Mesón</b><br><b>La Peña Soriana</b>").openPopup();
   </script>
 
-<script>
-  if('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('/pwabuilder-sw.js')
-             .then(function() { console.log("Service Worker Registered"); });
-  }
-  </script>
 </body>
 
 </html>
