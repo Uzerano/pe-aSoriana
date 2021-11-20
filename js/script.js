@@ -13,14 +13,11 @@
 
 
 
-const iconoMenu = document.querySelector('#boton__menu'),
+/*const iconoMenu = document.querySelector('#boton__menu'),
        menu = document.querySelector('#nav');
 
 
 iconoMenu.addEventListener('click', (e) => {
     //Alternamos estilos para el menu y body
         menu.classList.toggle('active');
-     
-      
-
-});
+});*/

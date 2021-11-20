@@ -29,20 +29,14 @@
   <title>Mesón La Peña Soriana</title>
 </head>
 
-
-
 <body>
-  <div class="menu contenedor">
+  <div class="menu">
     <div class="logo">
       <p>Mesón La Peña Soriana</p>
-      <div id="boton__menu">
-        <i class="fas fa-bars"></i>
-      </div>
-      
     </div>
 
-    <nav class="navegacion active" id="nav" >
-      <ul >
+    <nav class="navegacion">
+      <ul>
         <li><a href="#sobre__nosotros">Sobre Nosotros</a></li>
         <li><a href="#especialidades">Especialidades</a></li>
         <li><a href="#comentarios">Comentarios</a></li>
@@ -355,7 +349,7 @@
           Madrid 28026
         </p>
         <span class="telefono">Telf. 645 62 65 48</span>
-
+          <p> <small> <a href="politica.html">Política de Privacidad Y Cookies</a> </small></p>
       </address>
     </div>
 
@@ -383,7 +377,6 @@
 
     <p class="parrafo__final">
       &copy;Copyright 2021. Luis Adán Ropero. Todos los derechos reservados.
-      <small> <a href="politica.html">Política de Privacidad Y Cookies</a> </small>
     </p>
   </footer>
 
@@ -401,53 +394,52 @@
   <script>
     const mymap = L.map('mapid').setView([40.4165, -3.70256], 13);
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-  maxZoom: 18,
-  id: 'mapbox/streets-v11',
-  tileSize: 512,
-  zoomOffset: -1,
-  accessToken: 'pk.eyJ1IjoidXplcmFubyIsImEiOiJja3Y0ejl4OXMwMjl4MnBwajAwcThpcW80In0.wSbMKDMguTuFMBx7CMMANA'
-}).addTo(mymap);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'pk.eyJ1IjoidXplcmFubyIsImEiOiJja3Y0ejl4OXMwMjl4MnBwajAwcThpcW80In0.wSbMKDMguTuFMBx7CMMANA'
+    }).addTo(mymap);
 
 
-mapid.onclick = function ubicacion() {
-  const mostrarMensaje = window.confirm('¿Nos permites usar tú ubicación?');
+    mapid.onclick = function ubicacion() {
+      const mostrarMensaje = window.confirm('¿Nos permites usar tú ubicación?');
 
-  if (mostrarMensaje === true) {
-    window.alert('Gracias...');
+      if (mostrarMensaje === true) {
+        window.alert('Gracias...');
 
-    if (navigator.geolocation) {
-      mymap.locate({
-        setView: true,
-        maxZoom: 16
-      });
+        if (navigator.geolocation) {
+          mymap.locate({
+            setView: true,
+            maxZoom: 16
+          });
 
-      function onLocationFound(e) {
-        var radius = e.accuracy;
+          function onLocationFound(e) {
+            var radius = e.accuracy;
 
-        L.marker(e.latlng).addTo(mymap)
-          .bindPopup("Estas aquí").openPopup();
+            L.marker(e.latlng).addTo(mymap)
+              .bindPopup("Estas aquí").openPopup();
 
-        L.circle(e.latlng, radius).addTo(mymap);
-      }
+            L.circle(e.latlng, radius).addTo(mymap);
+          }
 
-      mymap.on('locationfound', onLocationFound);
+          mymap.on('locationfound', onLocationFound);
 
-      this.onclick = null;
-    }
-  } else {
-    window.alert('Gracias de todos modos, disfrute de su visita.');
-    this.onclick = null;
-  };
-};
+          this.onclick = null;
+        }
+      } else {
+        window.alert('Gracias de todos modos, disfrute de su visita.');
+        this.onclick = null;
+      };
+    };
 
-const marker = L.marker([40.38260, -3.71145], {
-  tittle: 'Mesón La Peña Soriana',
-}).addTo(mymap);
+    const marker = L.marker([40.38260, -3.71145], {
+      tittle: 'Mesón La Peña Soriana',
+    }).addTo(mymap);
 
-marker.bindPopup("<b>Mesón</b><br><b>La Peña Soriana</b>").openPopup();
-
+    marker.bindPopup("<b>Mesón</b><br><b>La Peña Soriana</b>").openPopup();
   </script>
 
 </body>
