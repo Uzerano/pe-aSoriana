@@ -305,19 +305,21 @@
       <form action="POST" name="contacto" data-netlify="true" class="formulario">
         <div class="campo">
           <label for="nombre" class="etiqueta">Nombre</label>
-          <input type="text" class="campo__nombre" required />
+          <input type="text" class="campo__nombre" id="nombre" spellcheck="true" placeholder="Su nombre" required />
         </div>
+        
         <div class="campo">
           <label for="email" class="etiqueta">Email</label>
-          <input type="email" class="campo__email" required />
+          <input type="email"  placeholder="Su email" class="campo__email" id="email"  required />
         </div>
+        <div id="error"></div>
         <div class="campo">
           <label for="mensaje" class="etiqueta">Mensaje</label>
-          <textarea name="mensaje" class="campo__mensaje"></textarea>
+          <textarea name="mensaje" spellcheck="true" class="campo__mensaje"></textarea>
         </div>
 
         <div class="campo">
-          <input type="submit" value="Enviar" class="enviar" />
+          <input type="submit" value="Enviar" class="enviar" onclick="validarEmail(form.email.value)" />
         </div>
       </form>
     </div>
@@ -380,7 +382,7 @@
     </p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/scripts.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
