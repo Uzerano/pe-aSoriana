@@ -108,7 +108,7 @@ img {
 }
 
 
- 
+
 .logo p {
   text-transform: uppercase;
   color: var(--colorPrincipal);
@@ -191,10 +191,10 @@ img {
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 10%;
+  bottom:10%;
   left: 5%;
   z-index: 1000;
 }
@@ -217,6 +217,20 @@ img {
 
 #politica .botones .boton__politica a {
   color: var(--blanco);
+}
+
+.volver__inicio {
+  width: 30rem;
+  margin: 5rem auto;
+  background-color: var(--azul);
+}
+
+.volver__inicio a {
+  display: block;
+  text-align: center;
+  color: var(--blanco);
+  letter-spacing: .3rem;
+  padding: 1rem 2rem;
 }
 
 /* SOBRE NOSOTROS */
@@ -383,13 +397,13 @@ img {
     margin: 0 auto;
   }
 
-#mapid .conectar {
-  top: 85%;
-}  
+  #mapid .conectar {
+    top: 85%;
+  }
 
-#mapid .conectar a {
-  font-size: 1.5rem;
-}
+  #mapid .conectar a {
+    font-size: 1.5rem;
+  }
 }
 
 .formulario {
@@ -442,20 +456,18 @@ input:invalid:required {
 /*  FOOTER  */
 
 .footer {
-  background: linear-gradient(
-    to right,
-    rgba(76, 76, 76, 1) 0%,
-    rgba(43, 43, 43, 1) 20%,
-    rgba(102, 102, 102, 1) 22%,
-    rgba(89, 89, 89, 1) 32%,
-    rgba(71, 71, 71, 1) 39%,
-    rgba(0, 0, 0, 1) 51%,
-    rgba(19, 19, 19, 1) 61%,
-    rgba(44, 44, 44, 1) 72%,
-    rgba(17, 17, 17, 1) 89%,
-    rgba(28, 28, 28, 1) 91%,
-    rgba(28, 28, 28, 1) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(76, 76, 76, 1) 0%,
+      rgba(43, 43, 43, 1) 20%,
+      rgba(102, 102, 102, 1) 22%,
+      rgba(89, 89, 89, 1) 32%,
+      rgba(71, 71, 71, 1) 39%,
+      rgba(0, 0, 0, 1) 51%,
+      rgba(19, 19, 19, 1) 61%,
+      rgba(44, 44, 44, 1) 72%,
+      rgba(17, 17, 17, 1) 89%,
+      rgba(28, 28, 28, 1) 91%,
+      rgba(28, 28, 28, 1) 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -536,7 +548,7 @@ input:invalid:required {
 }
 
 .direccion small a {
-  color: var(--blanco) ;
+  color: var(--blanco);
 }
 
 .body {
