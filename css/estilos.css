@@ -183,7 +183,7 @@ img {
 
 /* ESTILOS A SECCION DE POLITICA DE PRIVACIDAD */
 
-#politica {
+.politica {
   width: 90%;
   margin: 0 auto;
   padding: 2rem;
@@ -199,14 +199,14 @@ img {
   z-index: 1000;
 }
 
-#politica .parrafo__politica {
+.politica .parrafo__politica {
   color: var(--negro);
   letter-spacing: .3rem;
   line-height: 3rem;
   color: var(--negro);
 }
 
-#politica .botones .boton__politica {
+.politica .botones .boton__politica {
   padding: 1rem 2rem;
   margin: 1rem 1rem;
   border: none;
