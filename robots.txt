@@ -4,6 +4,6 @@ User-agent: *
 User-agent: Googlebot
 Disallow: /politica/
 
-Allow: /
+
 
 Sitemap: https://webpenasoriana.netlify.app/sitemap.xml
