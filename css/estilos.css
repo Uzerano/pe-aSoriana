@@ -453,6 +453,60 @@ input:invalid:required {
 
 
 
+
+  .contacto__aviso{
+    .contacto__aviso {
+      background-color: var(--blanco);
+      width: 90%;
+      margin: 0 auto;
+      text-justify: auto;
+    }
+  }
+
+  .aviso__titulo {
+    text-transform: uppercase;
+  color:#ff0000;
+  font-size: 3.5rem;
+  border-bottom: 1rem  solid #ff0000;
+  width: 80%;
+  margin: 0 auto;
+  }
+
+  .aviso__parrafo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: .2rem;
+    line-height: 3rem;
+    width: 90%;
+    margin: 0 auto;
+    padding-top:3rem;
+  }
+
+
+  @media (min-width: 768px)  {
+     .contacto__aviso {
+      width: 70%;
+      margin: 0 auto;
+      padding-top: 4rem;
+     }
+
+     .aviso__titulo {
+      width:50%;
+     }
+
+     .aviso__parrafo{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      letter-spacing: .2rem;
+      width: 80%;
+    }
+  }
+
+ 
+
+
+
+
+
+
 /*  FOOTER  */
 
 .footer {
